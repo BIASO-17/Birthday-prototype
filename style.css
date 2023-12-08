@@ -6,6 +6,9 @@
     font-size: 34px;
     font-family: sans-serif;
 }
+a{
+    color: blue;
+}
     @media screen  and (min-width:722px),(min-height:1614) {
 body{
     display: none;
