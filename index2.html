@@ -1,0 +1,68 @@
+Certainly! To achieve a typewriter effect, where each character is displayed one at a time, you can modify the JavaScript code. Here's an example:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typewriter Effect</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Typewriter Effect</h1>
+  <div id="textContainer"></div>
+
+  <script>
+    // Array of texts to display with typewriter effect
+    const texts = [
+      'Hello, World!',
+      'This is a sample text.',
+      'You can add more texts to the array.',
+      'Each text will be displayed with a typewriter effect.',
+      'Enjoy!',
+    ];
+
+    // Function to display text with a typewriter effect
+    function displayTextWithTypewriterEffect(text, element, index = 0) {
+      if (index < text.length) {
+        element.textContent += text.charAt(index);
+        index++;
+        setTimeout(() => displayTextWithTypewriterEffect(text, element, index), 100);
+      }
+    }
+
+    // Function to display texts with a typewriter effect and 5-second interval
+    function displayTextsWithInterval() {
+      let index = 0;
+      const textContainer = document.getElementById('textContainer');
+
+      function displayNextText() {
+        textContainer.textContent = ''; // Clear previous text
+        displayTextWithTypewriterEffect(texts[index], textContainer);
+        index = (index + 1) % texts.length;
+      }
+
+      // Initial display
+      displayNextText();
+
+      // Set interval to display next text every 5 seconds
+      setInterval(displayNextText, 5000);
+    }
+
+    // Call the function to start text display
+    displayTextsWithInterval();
+  </script>
+
+</body>
+</html>
+```
+
+In this example, the `displayTextWithTypewriterEffect` function is responsible for displaying each text with a typewriter effect. The `setTimeout` function is used to introduce a delay between each character, creating the typewriter effect. The main function, `displayTextsWithInterval`, then calls this typewriter effect function for each text with a 5-second interval.
