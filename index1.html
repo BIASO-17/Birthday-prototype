@@ -12,7 +12,27 @@
         <div id="textContainer"></div>
     </div>
     <div  id="main-2">
-        <div id="inner-main-2"></div>
+        <div id="inner-main-2">
+          <p id="text">My Dearest [Friend's Name],
+        
+            On this magical day, as the world celebrates your birthday, I want to take a moment to express my heartfelt wishes and gratitude for having you in my life. Happy birthday, my dear friend!
+            
+            From the first day we crossed paths, it was evident that our friendship was destined to be something extraordinary. Your infectious laughter, your kind heart, and your unwavering support have touched my life in ways I cannot even begin to express. You bring so much light and positivity into my world, and for that, I am eternally grateful.
+            
+            Through the ups and downs, the laughter and tears, you have stood by my side with unwavering loyalty. Your presence has been a constant source of comfort and strength, reminding me that I am never alone. The memories we have created together are treasures I hold dear, and I cherish each and every moment we have shared.
+            
+            Your friendship has taught me the true meaning of love, compassion, and selflessness. You have a remarkable ability to see the beauty in others and bring out the best in them. Your kindness knows no bounds, and your generosity is unparalleled. You have made a profound impact on my life, and I am forever grateful for the love and care you have shown me.
+            
+            As we celebrate your special day, my wish for you is simple yet profound. May your path be filled with endless joy, boundless adventures, and remarkable achievements. May you continue to pursue your dreams with passion and determination, knowing that you have the unwavering support of those who love you.
+            
+            On this day, I want you to know how truly special you are to me. Your friendship has been a gift that I treasure beyond measure. Thank you for being the incredible person that you are, for bringing so much love and joy into my life, and for being there for me through thick and thin.
+            
+            Happy birthday, my dear friend! May this day be the beginning of a new chapter filled with laughter, love, and unforgettable memories. May you always find happiness in every step you take and may all your dreams come true.
+            
+            With all my love and warmest wishes,
+            <br>
+            Your friend,Ife.</p>
+        </div>
     </div>
     <div id="footer">
         <p>Enjoy the rest of your day.</p>
@@ -20,6 +40,7 @@
     <script>
         // Array of texts to display with typewriter effect
         const texts = [
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, non? ',
           'Hello, World!',
           'This is a sample text.',
           'You can add more texts to the array.',
@@ -50,12 +71,40 @@
           // Initial display
           displayNextText();
     
-          // Set interval to display next text every 5 seconds
-          setInterval(displayNextText, 5000);
+          // Set interval to display next text every 10 seconds
+          setInterval(displayNextText, 10000);
         }
     
         // Call the function to start text display
         displayTextsWithInterval();
+
+
+
+        // for inner-main-2
+        var text = document.getElementById("text").textContent;
+      document.getElementById("text").textContent = "";
+
+      var index = 0;
+      var interval = setInterval(function () {
+        document.getElementById("text").textContent += text[index];
+        index++;
+        if (index >= text.length) {
+          clearInterval(interval);
+        }
+      }, 50);
+
+      var lot = document.getElementById("birth").textContent;
+
+      var index = 0;
+      var interval = setInterval(function () {
+        document.getElementById("birth").textContent += lot[index];
+        index++;
+        if (index >= lot.length) {
+          clearInterval(interval);
+        }
+      }, 50);
+      
+
       </script>
 </body>
 </html>

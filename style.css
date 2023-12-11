@@ -32,9 +32,13 @@ h2{
     font-size: 40px;
 }
 #textContainer{
+    border: 1px solid black;
         box-sizing: border-box;
+        font-size: 100%;
+        text-align: center;
+        text-indent: 20px;
     margin:10px ;
-    padding: 20px 20px;
+    padding: 20px 40px;
     min-height: 70%;
     border-radius: 30px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -50,14 +54,19 @@ h2{
 }
 #inner-main-2{
     box-sizing: border-box;
+    overflow-y: scroll;
     margin: auto;
-    margin-top: 120px;
+    margin-top: 100px;
     padding: 20px;
     height: 70%;
-    width: 70%;
+    width: 90%;
     border-radius: 30px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color:  #ff99cc ;
+}
+#inner-main-2 p{
+    padding: 20px;
+    text-align: center;
 }
 #footer{
     padding: 30px;
