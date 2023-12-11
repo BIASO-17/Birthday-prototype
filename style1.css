@@ -30,7 +30,9 @@ body{
 }
 h2{
     
-    font-size: 40px;
+    font-size: 60px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 900;
 }
 #textContainer{
     border: 1px solid black;
