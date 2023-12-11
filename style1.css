@@ -1,0 +1,19 @@
+
+@media screen  and (min-width:722px),(min-height:1614) {
+    a{
+    color: blue;
+    text-align: center;
+}
+   
+    *{
+        margin: 0px;
+        
+        color: #ffffff;
+        font-size: 34px;
+        font-family: sans-serif;
+        
+    }
+    body{
+        background-color:#ED217C;
+    }
+}
