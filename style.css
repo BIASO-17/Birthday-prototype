@@ -10,6 +10,10 @@
 
 @media screen  and (max-width:721px),(max-height:1613) {
     *{
+        padding: 0px;
+        padding-top: 40px;
+        padding-right: 0px;
+        padding-left: 0px;
         margin: 0px;
         text-align: center;
         color: #ffffff;
@@ -21,10 +25,28 @@
    
     a{
     color: blue;
-   
-
 }
    
+h3{
+    box-sizing: border-box;
+    margin: 0px 4% 0px 0px;
+    width: 100%;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 1000;
+    transform: rotate(-30deg);
+    font-size: 110px;
+}
+p{
+    padding: 0px;
+   /* border: 1px solid black;*/
+    box-sizing: border-box;
+    margin: -5% 00px 0px 13%;
+    width: 100%;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 1000;
+    transform: rotate(-30deg);
+    font-size: 70px;
+}
    
    
 }
