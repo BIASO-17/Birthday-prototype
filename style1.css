@@ -12,55 +12,63 @@
 body{
     display: none;
 }
+      
 }
 @media screen  and (max-width:721px),(max-height:1613) {
-    body{
-        height: 100%;
-    }
+  #all-body{
+    height:auto;
+        border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+      }
     #main-1{
 
         box-sizing: border-box;
-        height: 700px;
+        height: 400px;
         
         background: linear-gradient(to left, #33ccff 50%, #ff99cc 100%);
-        padding: 50px 20px 0px 20px;
+        padding: 20px 20px 0px 20px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       
 
 }
 h2{
     
-    font-size: 60px;
+    font-size: 35px;
     font-family: 'Dancing Script', cursive;
-    font-weight: 900;
+    font-weight:900;
+    Text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-shadow: 2px 2px 0px  #ED217C;
 }
 #textContainer{
-    border: 1px solid black;
+    
         box-sizing: border-box;
-        font-size: 100%;
-        text-align: center;
+        font-size: 25px;
+        
         text-indent: 20px;
+ 
     margin:30px ;
-    padding: 20px 40px;
-    min-height: 70%;
+    padding: 20px 20px 40px 20px;
+    height: 65%;
     border-radius: 30px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background: linear-gradient(to left,#aa51a9  0%,#b3376e 100%);
-    padding: 50px 20px 0px 20px;
+    
 }
 #main-2{
-    padding: 30px;
+    padding: 10px;
     box-sizing: border-box;
-    height: 800px;
+    height:600px ;
     background-color:#ED217C;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #inner-main-2{
+  
     box-sizing: border-box;
     overflow-y: scroll;
     margin: auto;
     margin-top: 100px;
-    padding: 20px;
+    padding: 20px 10px;
     height: 70%;
     width: 90%;
     border-radius: 30px;
@@ -68,17 +76,23 @@ h2{
   background-color:  #ff99cc ;
 }
 #inner-main-2 p{
-    padding: 20px;
-    text-align: center;
+  font-size: 17px;
+    padding: 20px 10px;
+    text-justify: inter-word;
+  text-align:justify;
 }
 #footer{
+  font-size: 10px;
     padding: 30px;
     box-sizing: border-box;
-    height: 113px;
+    height: auto;
     background-color:#33ccff ;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
 }
+  #footer p{
+    font-size:25px;
+  }
     }
     
     
