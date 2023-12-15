@@ -35,7 +35,7 @@ h3{
   padding: 0px;
     box-sizing: border-box;
     margin: 0px 4% 0px 0px;
-    max-width: 100vw;
+    width: 100%;
   text-align:left;
     font-family: 'Dancing Script', cursive;
     font-weight: 1000;
