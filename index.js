@@ -1,70 +1,20 @@
- // Array of texts to display
- const texts = [
-    'Did you know that your smile makes my heart bloom?❤️‍🩹❤️‍🩹❤️‍🩹 Did you know that your fragrance makes my heart skip a beat?🤭🤭🤭💞 It is true!😍😍 I could send you a bunch of beautiful flowers🌹🌹 for your birthday but they are not even close to your level of beauty❤️‍🔥❤️‍🔥. Have a wonderful birthday, my sweetheart 🥰🥰🥂💫💋💋💋 O🌹M🌹O🌹L🌹A🌹B🌹A🌹K🌹E ♥️C 🌹A 🌹R 🌹E 🌹S',
-    'Wishing u 12  months of🥰 happiness;52 weeks of fun, 365 days of laughter😁.8760 hours of good luck,525600 minutes of joy ; 31536000 seconds of success, crank the🎤 tunes, dance and shake💃, light the candles,cut the cake🎂.make it a day, that is simply Great!!! Happy B"Day 💖🥰♥️FROM ESTHER 🥰',
-    'In soft gleaming of stars..😍😍🥰May all your dreams💝💞 come true,May evry star of every night bring lots of love and joy to you 🥰HAPPY BIRTHDAY TO YOU BABE 💕❣️FROM NASROH 🥰❣️',
-    '💦💎Flying in the plane of ambition,and land on the airport of success,🤲 good luck is💙 yours,wish is mine may your future always shine...✨with lot of blessings and love 💞~HAPPY BIRTHDAY TO🎊🎉🍻🎂 YOU~ BABE🫂❣️ (From HANNY B)',
-    '"Happy Birthday!💕💕 Wishing you a day filled with joy, laughter😃😃, and lots of love💖💖. You mean the world to me, and I am grateful to have you as my friend. Cheers to another amazing year ahead! 🎉🎂" From tolulope',
-    'Happy birthday to the most incredible friend in the world💕! May your day be filled with laughter, good times, and unforgettable moments. You deserve all the happiness that comes your way. Cheers to another year of amazing memories together! 🎉🎈🎂'
-  ];
-
-  // Function to display text with a typewriter effect
-  function displayTextWithTypewriterEffect(text, element, index = 0) {
-    if (index < text.length) {
-      element.textContent += text.charAt(index);
-      index++;
-      setTimeout(() => displayTextWithTypewriterEffect(text, element, index), 50);
+// Function to simulate the typewriter effect
+function typeWriter(text, i, callback) {
+    if (i < text.length) {
+      document.getElementById('typewriter-text').innerHTML += text.charAt(i);
+      i++;
+      setTimeout(function() {
+        typeWriter(text, i, callback);
+      }, 50); // Adjust the typing speed here (in milliseconds)
     } else {
-      // Set timeout to start displaying the next text after 5 seconds
-      setTimeout(() => displayNextText(), 5000);
+      callback();
     }
   }
 
-  // Function to display texts with a typewriter effect and a 5-second delay after completion
-  function displayNextText() {
-    if (index < texts.length) {
-      textContainer.textContent = ''; // Clear previous text
-      displayTextWithTypewriterEffect(texts[index], textContainer);
-      index++;
-    }
-  }
+  // Text to be displayed with typewriter effect
+  var textToType = "My Dearest [Friends Name],On this magical day, as the world celebrates your birthday, I want to take a moment to express my heartfelt wishes and gratitude for having you in my life. Happy birthday, my dear friend! From the first day we crossed paths, it was evident that our friendship was destined to be something extraordinary. Your infectious laughter, your kind heart, and your unwavering support have touched my life in ways I cannot even begin to express. You bring so much light and positivity into my world, and for that, I am eternally grateful.Through the ups and downs, the laughter and tears, you have stood by my side with unwavering loyalty. Your presence has been a constant source of comfort and strength, reminding me that I am never alone. The memories we have created together are treasures I hold dear, and I cherish each and every moment we have shared.Your friendship has taught me the true meaning of love, compassion, and selflessness. You have a remarkable ability to see the beauty in others and bring out the best in them. Your kindness knows no bounds, and your generosity is unparalleled. You have made a profound impact on my life, and I am forever grateful for the love and care you have shown me. As we celebrate your special day, my wish for you is simple yet profound. May your path be filled with endless joy, boundless adventures, and remarkable achievements. May you continue to pursue your dreams with passion and determination, knowing that you have the unwavering support of those who love you.On this day, I want you to know how truly special you are to me. Your friendship has been a gift that I treasure beyond measure. Thank you for being the incredible person that you are, for bringing so much love and joy into my life, and for being there for me through thick and thin. Happy birthday, my dear friend! May this day be the beginning of a new chapter filled with laughter, love, and unforgettable memories. May you always find happiness in every step you take and may all your dreams come true.With all my love and warmest wishes, Your friend,Ife.";
 
-  // Initial setup
-  let index = 0;
-  const textContainer = document.getElementById('textContainer');
-
-  // Start the text display
-  displayTextWithTypewriterEffect(texts[index], textContainer);
-
-
-
-
-
-
-//main-2
-
-  var text = document.getElementById("text").textContent;
-  document.getElementById("text").textContent = "";
-
-  var inde = 0;
-  var interval = setInterval(function () {
-    document.getElementById("text").textContent += text[index];
-    index++;
-    if (index >= text.length) {
-      clearInterval(interval);
-    }
-  }, 50);
-
-  var lot = document.getElementById("birth").textContent;
-
-  var inde = 0;
-  var interval = setInterval(function () {
-    document.getElementById("birth").textContent += lot[index];
-    index++;
-    if (index >= lot.length) {
-      clearInterval(interval);
-    }
-  }, 50);
-
-  
-   
+  // Call the typewriter function
+  typeWriter(textToType, 0, function() {
+    console.log('Typing animation complete.');
+  });
