@@ -45,7 +45,7 @@ h1{
         box-sizing: border-box;    
         margin:30px auto;
         padding: 20px 20px 40px 20px;
-        height: 65%;
+        min-height: 65%;
         min-width: 80%;
         font-family: 'EB Garamond', serif;
         font-size: 25px; 
