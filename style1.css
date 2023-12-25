@@ -77,12 +77,14 @@ h1{
   background-color:  #ff99cc ;
 }
 #inner-main-2 p{
-  
+  direction: ltr;
+ 
     font-family: 'EB Garamond', serif;
   font-size: 17px;
     padding: 20px 10px;
-    text-justify: inter-word;
-  text-align:justify;
+    
+
+ 
 }
 #footer{
   font-size: 10px;
