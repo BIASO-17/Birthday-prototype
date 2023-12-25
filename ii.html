@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typewriter Effect with Word Spacing</title>
+  <style>
+    #my-text {
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid #000; /* You can adjust the border properties for a cursor effect */
+    }
+  </style>
+</head>
+<body>
+
+<div id="my-text">Your existing text goes here.</div>
+
+<script>
+  // JavaScript code for typewriter effect on existing text
+  const existingText = document.getElementById("my-text").innerText;
+  const speed = 50; // Adjust the speed (milliseconds per character)
+  const spaceCharacter = ' '; // Space character to add between words
+
+  document.getElementById("my-text").innerText = ''; // Clear the existing text
+
+  let i = 0;
+  function typeWriter() {
+    if (i < existingText.length) {
+      const currentChar = existingText.charAt(i);
+      const charWithSpace = currentChar === ' ' ? spaceCharacter : currentChar;
+      document.getElementById("my-text").innerText += charWithSpace;
+      i++;
+      setTimeout(typeWriter, speed);
+    } else {
+      // Add an extra space after each word
+      document.getElementById("my-text").innerText += spaceCharacter;
+    }
+  }
+
+  // Start the typewriter effect when the page is loaded
+  window.onload = function() {
+    typeWriter();
+  };
+</script>
+
+</body>
+</html>
