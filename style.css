@@ -1,7 +1,5 @@
 
-*{
-    background-color: black;
-}
+
 
 @media screen  and (min-width:722px),(min-height:1614) {
     body{
@@ -20,27 +18,36 @@
         font-size: 34px;
         font-family: sans-serif;
         
-        background-color:#ED217C;
+       
         
     }
    body{
      padding: 0px;
      margin: 0px;
+     background-image: url(./Images/283853ife-gf.JPG);
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: 0px 0px;
      
-     background-color:#ED217C;
+    
      
    }
     a{
-        width: 35%;
+        box-sizing: border-box;
+        width: 20%;
+       
         padding: 5px;
-        border: 1px solid black;
+       
         box-sizing: border-box;
     color:white;
     display: block;
-        margin-right: 10%;
-    float: right;
+    margin-top: 100%;
+        margin-left: 10%;
+    float: left;
     text-decoration: none;
     font-family: 'Dancing Script', cursive;
+    
+   
   
 }
 a:hover{
